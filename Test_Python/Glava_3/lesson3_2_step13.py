@@ -18,12 +18,14 @@ def link_t(link):
 
 class TestReg(unittest.TestCase):
     def test_reg1(self):
-        self.assertEqual(link_t("http://suninjuly.github.io/registration1.html"),
-                         "Поздравляем! Вы успешно зарегистировались!", "registration is failed")
+        browser = webdriver.Chrome()
+        browser.get(link)
+        self.assertEqual(link_t("http://suninjuly.github.io/registration1.html"), "Поздравляем! Вы успешно зарегистировались!", "registration is failed")
 
     def test_reg2(self):
-        self.assertEqual(link_t("http://suninjuly.github.io/registration2.html"),
-                         "Поздравляем! Вы успешно зарегистировались!", "registration is failed")
+        browser = webdriver.Chrome()
+        browser.get(link)
+        self.assertEqual(link_t("http://suninjuly.github.io/registration2.html"), "Поздравляем! Вы успешно зарегистировались!", "registration is failed")
 
 
 if __name__ == "__main__":
